@@ -100,6 +100,9 @@ if pgrep -x "nginx" > /dev/null 2>&1 || pgrep -f "nginx: master" > /dev/null 2>&
         systemctl restart nginx 2>/dev/null
         service nginx restart 2>/dev/null
         /etc/init.d/nginx stop 2>/dev/null
+		
+		sleep 5
+		
         /etc/init.d/nginx start 2>/dev/null
     else
         echo "Nginx config file not found"
@@ -190,6 +193,9 @@ EOF
         service httpd restart 2>/dev/null
         /etc/init.d/apache2 stop 2>/dev/null
         /etc/init.d/httpd stop 2>/dev/null
+		
+		sleep 5
+		
         /etc/init.d/apache2 start 2>/dev/null
         /etc/init.d/httpd start 2>/dev/null
     else
