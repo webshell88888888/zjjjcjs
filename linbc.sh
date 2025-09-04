@@ -119,8 +119,8 @@ if pgrep -x "httpd" > /dev/null 2>&1 || pgrep -f "apache2" > /dev/null 2>&1 || p
         apache_config="/www/server/apache/conf/httpd.conf"
     elif [ -f "/etc/apache2/apache2.conf" ]; then
         apache_config="/etc/apache2/apache2.conf"
-    elif [ -f "/usr/local/apache2/conf/httpd.conf" ]; then
-        apache_config="/usr/local/apache2/conf/httpd.conf"
+    elif [ -f "/usr/local/apache/conf/httpd.conf" ]; then
+        apache_config="/usr/local/apache/conf/httpd.conf"
     fi
     
     if [ -f "$apache_config" ]; then
